@@ -1,0 +1,39 @@
+//Elabore um programa que leia um número (1 a 9) e imprima a tabuada desse número.
+
+
+import java.util.Scanner;
+
+public class Q1{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("digite o numero de um a nove: ");
+
+
+
+        int num = scanner.nextInt();
+
+
+        if(num >= 1 && num <= 9){
+            System.out.println("tabuada" + num );
+
+            for(int n=1; n<=10; n++){
+                int resul = num * n;
+
+            
+                System.out.print(num +"Y"+n +"=" + resul);
+
+            }
+
+        }else{
+            System.out.println(" quando o intervalo valido estiver fora.");
+
+        }
+        
+        scanner.close();
+  
+    }
+}
+
+
+
+     
