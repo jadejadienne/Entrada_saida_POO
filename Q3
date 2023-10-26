@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Q3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o tempo gasto na viagem em horas: ");
+        double tempo = scanner.nextDouble();
+
+        System.out.print("Digite a velocidade média Km/h: ");
+        double velo_Med = scanner.nextDouble();
+
+        double dist = tempo * velo_Med;
+        double litrosUsados = dist / 12;
+
+        System.out.println("Velocidade Média: " + velo_Med + " Km/h");
+        System.out.println("Tempo Gasto: " + tempo + " horas");
+        System.out.println("Distância Percorrida: " + dist + " Km");
+        System.out.println("Litros Utilizada: " + litrosUsados + " litros");
+
+        scanner.close();
+    }
+}
