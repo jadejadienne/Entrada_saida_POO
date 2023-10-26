@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Q8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor da diária normal: ");
+        double diariaNormal = scanner.nextDouble();
+
+        double taxaPromocao = 0.22; 
+        double ocupacaoSemPromocao = 0.40; 
+        double ocupacaoComPromocao = 0.70; 
+
+        double diariaPromocao = diariaNormal - (diariaNormal * taxaPromocao);
+        double arrecadacaoSemPromocao = diariaNormal * ocupacaoSemPromocao * 30;
+        double arrecadacaoComPromocao = diariaPromocao * ocupacaoComPromocao * 30;
+        double lucroOuPrejuizo = arrecadacaoComPromocao - arrecadacaoSemPromocao;
+
+     
+        System.out.println("(A) O valor da diária no período da promoção: " + diariaPromocao);
+        System.out.println("(B) O valor médio arrecadado sem a promoção, durante um mês: " + arrecadacaoSemPromocao);
+        System.out.println("(C) O valor médio arrecadado com a promoção, durante um mês : " + arrecadacaoComPromocao);
+        System.out.println("(D) O lucro ou prejuízo mensal com a promoção: " + lucroOuPrejuizo);
+
+    
+        scanner.close();
+    }
+}
