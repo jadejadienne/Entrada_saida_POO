@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Q6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Qual a duração do evento em segundos: ");
+        int duracaoSegu = scanner.nextInt();
+
+        int horas = duracaoSegu / 3600; 
+        int minutos = (duracaoSegu % 3600);
+        int segundos = duracaoSegu % 60;
+
+    
+        String Formatada = String.format("%05d:%05d:%05d", horas, minutos, segundos);
+
+        System.out.println("Duração do evento: " + Formatada);
+
+        scanner.close();
+    }
+}
